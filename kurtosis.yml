@@ -1,1 +1,26 @@
 name: github.com/LZeroAnalytics/coreum-package
+description: |
+  Cosmos/Coreum
+  ============
+  This Kurtosis package instantiates private blockchain testnets for Coreum and Cosmos Hub chains. It automates genesis file generation, network launching, and deployment of auxiliary services like monitoring tools, block explorers, faucets, and load testing utilities.
+
+  Prerequisites
+  -------------
+  - Basic understanding of Cosmos/Coreum blockchain architecture
+  - Knowledge of validator and node configuration parameters
+
+  Configuration
+  -------------
+  To configure this package, you'll need to provide the following information:
+  - `chains`: Configuration for each blockchain
+    - `name`: Chain name (e.g., "coreum", "gaia")
+    - `chain_id`: Unique identifier for the chain
+    - `denom`: Token denomination configuration (name, display, symbol, units)
+    - `participants`: Validator and node configuration
+  - `connections`: IBC connections between chains (for multi-chain setups)
+  - `services`: Additional services to deploy
+    - `bdjuno`: Block explorer configuration
+    - `prometheus/grafana`: Monitoring stack settings
+    - `faucet`: Token distribution service configuration
+    - `locust`: Transaction load testing settings
+  - `network_conditions`: Latency and jitter settings for realistic testing
